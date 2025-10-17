@@ -4,6 +4,7 @@
 # Check RAM Capacity
 $ramModules = Get-CimInstance -ClassName Win32_PhysicalMemory
 $totalRAMGB = [math]::Round(($ramModules | Measure-Object -Property Capacity -Sum).Sum / 1GB, 2)
+Clear-Host
 
 Write-Host "Total Installed RAM: $totalRAMGB GB"
 if ($totalRAMGB -lt 16) {
@@ -11,7 +12,7 @@ if ($totalRAMGB -lt 16) {
 } elseif ($totalRAMGB -eq 16) {
     Write-Host "RAM is 16GB!" -ForegroundColor Green
 } elseif ($totalRAMGB -gt 16) {
-    Write-Host "RAM is more than 16GB!" -ForegroundColor Red
+    Write-Host "RAM is more than 16GB!" -ForegroundColor Yellow
 }
 
 # Generate battery report
@@ -59,7 +60,5 @@ if (Test-Path $batteryReportPath) {
 }
 
 # Launch Windows Update
-Write-Host "Opening Windows Update..."
+Read-Host -Prompt "Press Enter to open Windows Update..."
 Start-Process "ms-settings:windowsupdate"
-Read-Host -Prompt "Press Enter to shutdown..."
-Stop-Computer -Force
