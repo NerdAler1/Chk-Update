@@ -1,0 +1,1 @@
+powershell.exe -ExecutionPolicy Bypass -NoExit -File zCheckall.ps1

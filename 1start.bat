@@ -1,1 +1,0 @@
-powershell.exe -ExecutionPolicy Bypass -NoExit -File Checkall.ps1

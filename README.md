@@ -8,7 +8,7 @@ A tool to check devices for RAM and Battery capacity, and update them. (Designed
 
 3. Type in “D:” in the terminal window and press enter.
 
-4. Type in “start.bat” in the terminal window and press enter. (You can also just type in “s” and press Tab to autocomplete
+4. Type in “start.bat” in the terminal window and press enter. (You can also just press Tab to autocomplete, since everything else is lower alphabetically)
 
 5. The script will now show memory capacity and battery health (after a brief moment), then open windows update settings.
 
